@@ -14,9 +14,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-
 public class Head_Note_Fragment extends Fragment {
-
 
     // При создании фрагмента укажем его макет
     @Override
@@ -32,16 +30,16 @@ public class Head_Note_Fragment extends Fragment {
         initList(view);
     }
 
-    // создаём список городов на экране из массива в ресурсах
+    // создаём список заметок на экране из массива в ресурсах
     private void initList(View view) {
-        LinearLayout layoutView = (LinearLayout)view;
+        LinearLayout layoutView = (LinearLayout) view;
         String[] titles = getResources().getStringArray(R.array.titles);
 
         // В этом цикле создаём элемент TextView,
         // заполняем его значениями,
         // и добавляем на экран.
         // Кроме того, создаём обработку касания на элемент
-        for(int i=0; i < titles.length; i++){
+        for (int i = 0; i < titles.length; i++) {
             Context context = getContext();
             if (context != null) {
                 String title = titles[i];
@@ -49,7 +47,6 @@ public class Head_Note_Fragment extends Fragment {
                 tv.setText(title);
                 tv.setTextSize(30);
                 layoutView.addView(tv);
-
 
                 final int fi = i;
                 tv.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +62,7 @@ public class Head_Note_Fragment extends Fragment {
     private void showPortNoteContent(int index) {
         // Откроем вторую activity
         Context context = getContext();
-        if(context != null){
+        if (context != null) {
             Intent intent = new Intent();
             intent.setClass(context, NoteContentActivity.class);
             // и передадим туда параметры

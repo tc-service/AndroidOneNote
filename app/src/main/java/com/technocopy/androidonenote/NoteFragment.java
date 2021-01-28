@@ -18,14 +18,10 @@ import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-
 public class NoteFragment extends Fragment {
-
-
 
     static final String ARG_INDEX = "index";
     private int index;
-
 
     public static NoteFragment newInstance(int index) {
         NoteFragment f = new NoteFragment();    // создание
@@ -57,7 +53,6 @@ public class NoteFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
         TextInputEditText textInputEditText = view.findViewById(R.id.etIn);
         TextView textView = view.findViewById(R.id.tvTitle);
         // Получить из ресурсов массив указателей на изображения гербов
@@ -67,8 +62,6 @@ public class NoteFragment extends Fragment {
         // Выбрать по индексу подходящий
         textInputEditText.setText(contents.getText(index));
         textView.setText(titles.getText(index));
-
-
 
     }
 }
