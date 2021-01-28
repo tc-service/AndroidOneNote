@@ -13,7 +13,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.material.textfield.TextInputEditText;
 
 
 public class NoteFragment extends Fragment {
@@ -46,7 +49,7 @@ public class NoteFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Таким способом можно получить головной элемент из макета
- //       View view = inflater.inflate(R.layout.fragment_note, container, false);
+
         return inflater.inflate(R.layout.fragment_note, container, false);
     }
 
@@ -54,13 +57,18 @@ public class NoteFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // найти в контейнере элемент
-        EditText editText = view.findViewById(R.id.tvIn);
 
-        // Получить из ресурсов массив content
+        TextInputEditText textInputEditText = view.findViewById(R.id.etIn);
+        TextView textView = view.findViewById(R.id.tvTitle);
+        // Получить из ресурсов массив указателей на изображения гербов
         TypedArray contents = getResources().obtainTypedArray(R.array.content);
+        TypedArray titles = getResources().obtainTypedArray(R.array.titles);
+
         // Выбрать по индексу подходящий
-        editText.setText(contents.getResourceId(index, -1));
+        textInputEditText.setText(contents.getText(index));
+        textView.setText(titles.getText(index));
+
+
 
     }
 }

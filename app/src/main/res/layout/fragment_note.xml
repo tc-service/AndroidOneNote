@@ -10,15 +10,19 @@
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="@string/hello_blank_fragment" />
+        android:text="@string/this_is_title" />
 
-    <EditText
-        android:id="@+id/tvIn"
-        android:gravity="center_vertical|center_horizontal"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </EditText>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my_notes" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </LinearLayout>
