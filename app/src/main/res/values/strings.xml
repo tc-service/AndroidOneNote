@@ -10,7 +10,16 @@
     <string name="My_car">My car</string>
     <string name="My_health">My health</string>
     <string name="Name">My useful notes</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="delete_before_add">Delete before add</string>
+    <string name="back_as_remove_fragment">Back as remove fragment</string>
+    <string name="replace">replace</string>
+    <string name="add">add</string>
+    <string name="new_fragment">New fragment:</string>
+    <string name="use_backstack">Use backstack</string>
+    <string name="main_screen">Main screen</string>
+    <string name="favorite_screen">Favorite screen</string>
+    <string name="hello_blank_fragment">Hello</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

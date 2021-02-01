@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:background="#FF9800"
+    android:background="@drawable/side_nav_bar"
     android:gravity="center"
     android:orientation="horizontal"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:background="@drawable/unnamed" />
 
     <TextView
         android:id="@+id/textView"
