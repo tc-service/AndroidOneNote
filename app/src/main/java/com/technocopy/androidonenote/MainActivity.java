@@ -30,11 +30,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        readSettings();
         initView();
     }
 
     private void initView() {
         Toolbar toolbar = initToolbar();
+        initDrawer(toolbar);
+        initMenus();
+    }
+
+    private void initMenus() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         initDrawer(toolbar);
 
     }
@@ -55,11 +63,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-                if (navigateFragment(id)){
-                    drawer.closeDrawer(GravityCompat.START);
+                Toast.makeText(MainActivity.this, id, Toast.LENGTH_SHORT).show();
+
+//                здесь при нажатии кнопок  приложение падает
+                if (navigateFragment(id)){                          //
+                    drawer.closeDrawer(GravityCompat.START);        //
                     return true;
-                }
-                return false;
+                }                   //
+                return false;       //
             }
         });
     }
