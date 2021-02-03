@@ -65,12 +65,11 @@ public class MainActivity extends AppCompatActivity {
                 int id = item.getItemId();
                 Toast.makeText(MainActivity.this, id, Toast.LENGTH_SHORT).show();
 
-//                здесь при нажатии кнопок  приложение падает
-                if (navigateFragment(id)){                          //
-                    drawer.closeDrawer(GravityCompat.START);        //
+                if (navigateFragment(id)){
+                    drawer.closeDrawer(GravityCompat.START);
                     return true;
-                }                   //
-                return false;       //
+                }
+                return false;
             }
         });
     }
